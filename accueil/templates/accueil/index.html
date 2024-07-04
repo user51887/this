@@ -1,0 +1,778 @@
+ {% extends 'base.html' %}
+ {% load i18n %}
+{% load bootstrap4 %}
+{% load static %}
+{% block body %}
+
+<!-- Top-Bar START -->
+<div id="top-bar" class="hidden-md-down">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-12">
+				<ul class="top-bar-info">				 
+					<li><i class="fas fa-map-marker-alt"></i>419, BD ABDELLAH EL GUERSIFI AGADIR 80000</li>
+					<li><i class="fas fa-phone-square"></i> Phone:  +212 5283-21492</li>
+					<li><i class="fa fa-envelope"></i>Email: cabinet.drbenayad@gmail.com</li>
+				</ul>					
+			</div>
+			<div class="col-md-3 col-12">
+				<ul class="social-icons hidden-sm">				 
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+					<li>  <a target="_blank" href="">
+						<i class="fab fa-instagram">
+							
+						</i>
+					</a></li>
+					
+					
+				</ul>							
+			</div>		
+		</div>
+	</div>
+</div>	
+<!-- Top-Bar END -->
+
+<!-- Navbar START -->
+<header>
+	<nav id="navigation4" class="container navigation">
+		<div class="nav-header">
+			<a class="nav-brand" href="{% url 'accueil:accueil' %}">
+				<img src="/static/site_static/img/logos/logo.png" alt="logo" id="main_logo">
+			</a>
+			<div class="nav-toggle"></div>
+		</div>
+
+		
+		<div class="nav-menus-wrapper">
+			<ul class="nav-menu align-to-right">
+				<li><a href="{% url 'accueil:accueil' %}">Acceuil</a></li>
+													
+				<li><a href="#ob">Nos objectifs</a></li>
+					
+							
+				<li><a href="#Se">Nos Services</a></li>
+					
+						
+				<li><a href="#eng">Nos Engagements</a></li>
+					
+				<li><a href="{% url 'equipes:equipe_list'  %}">Notre Equipe</a></li>
+					
+								
+				<li><a href="#Ren">Rendez-vous</a></li>
+					
+				
+				<li><a href="{% url 'contact:send_email' %}">Contact</a></li>
+
+				<li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+										
+				
+					
+				</li>												
+			</ul>
+		</div>
+			
+	</nav>	
+</header>	
+<!-- Navbar END -->
+
+
+     <!-- Slider START -->
+     <div id="a" class="swiper-main-slider swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 Start -->
+            <div class="swiper-slide" style="background-image:url('/static/site_static/3.jpg');">
+                <div class="container">
+                    <div class="slider-content center-holder">
+                        <h3 class="extra-light animated fadeInDown">BIENVENUE ! <span style="color:rgb(60,136,126)">au Nouveau Clients</span></h3>
+                        <h2 class="light animated fadeInDown" >Une équipe à l'écoute de vos besoins</h2>
+                        <h5 class="animated fadeInUp">"POUR UN SOURIRE EN SANTÉ."</h5>	
+                        <div class="animated fadeInUp mt-30">
+                            <a href="#Ren" class="primary-button semi-rounded button-md">Obtenir un Rendez-vous</a>
+                            <a href="{% url 'contact:send_email' %}" class="white-button-bordered semi-rounded button-md w-200">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 1 End -->
+            
+            <!-- Slide 2 Start -->	
+            <div class="swiper-slide primary-overlay-80" style="background-image:url('/static/site_static/58.jpg');">
+                <div class="container">
+                    <div class="slider-content center-holder">
+                        <h3 class="extra-light animated fadeInDown">DES SOINS PERSONNALISÉS </h3>
+                        <h2 class="light animated fadeInDown" > POUR TOUTE LA FAMILLE.</h2>
+                        <h5 class="animated fadeInUp" >Nous offrons des services variés de qualité pour la santé buccodentaire de nos patients.</h5>	
+                        <div class="animated fadeInUp mt-30">
+                            <a href="#Ren" class="white-button semi-rounded button-md">Obtenir un Rendez-vous</a>
+                            <a href="{% url 'contact:send_email' %}"class="white-button-bordered semi-rounded button-md">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>	
+            <!-- Slide 2 End -->
+    
+            <!-- Slide 3 Start -->
+            <div class="swiper-slide black-overlay-20" style="background-image: url('/static/site_static/60.jpg');">
+                <div class="container">
+                    <div class="slider-content center-holder">
+                        <h3 class="extra-light animated fadeInDown">Vos Petits</h3>
+                        <h2 class="light animated fadeInDown"> Notre Priorité.</h2>
+                       
+                        <div class="animated fadeInUp mt-30">
+                            <a href="#Ren" class="primary-button semi-rounded button-md w-300" style="background-color:rgb(60,136,126); border:2px solid rgb(60,136,126);">Rendez-vous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 End -->		
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>	
+    </div>
+    <!-- Slider END -->
+    
+
+<!-- Info Section START -->
+<div id="inf" class="section-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-12">
+				<img src="{% static 'site_static\15.jpg' %}" class="rounded-border shadow-primary" alt="img">
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-12">
+				<div class="pl-45-md">
+					<div class="section-heading left-holder">
+						<h2 class="bold">Le Centre Dentaire <span class="italic libre-baskerville " style="color:rgb(60,136,126)">Ben Ayad .</span></h2>
+						<div class="section-heading-line"></div>
+					</div>
+					<div class="text-content">
+						<p>Le Centre Dentaire Ben Ayad est une structure qui réunit, dans la même enceinte, différentes spécialités en soins dentaires en général, permettant de satisfaire au mieux vos attentes et vous garantir ainsi des services et un suivi de qualité dans un cadre chaleureux et conviviale.
+							Le centre dentaire dispose des techniques les plus pointues de la médecine dentaire moderne: un matériel dernier cri, des produits hauts de gamme et des équipements ultra-modernes continuellement mis à jour pour garder nos dispositifs de travail dans les normes internationales.
+							</p>
+					</div>
+
+					
+
+					<div class="mt-30">
+						<a href="{% url 'contact:send_email' %}" class="primary-button button-sm" style="background-color:rgb(60,136,126); border:2px solid rgb(60,136,126);">Contactez-nous</a>
+					</div>			
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+<!-- Info Section END -->
+
+
+
+
+<!-- Objectives Section START -->
+<div id="ob" class="section-block-parallax jarallax" data-jarallax data-speed="0.6"  style="background-image: url('/static/site_static/9.PNG');">
+	<div class="container">
+		<div class="section-heading center-holder">
+		
+			<h3 class="bold">Nos<span class="italic libre-baskerville " style="color:rgb(60,136,126)"> Objectifs</span></h3>
+	 <div class="section-heading-line center-holder"></div>
+			
+		
+			<a>Le centre Dentaire BEN AYAD Est vous propose des consultations en dentaire, médecine générale et ophtalmologie sur RDV, </br>du lundi au Samedi de 09h00 à 17h00.
+
+				 
+	 		
+		</div>	
+
+		<div class="row  justify-content-center mt-30">
+			
+
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="feature-block-2 feature-bordered feature-shadow feature-bg inner-40 center-holder">
+					<i class="icon-idea4"></i>
+					<h4>Rigueur et qualité</h4>
+					<p>Écoute et conseils pour vous apporter un accompagnement personnalisé de la part de notre équipe pluri-disciplinaire.
+						Innovation des infrastructures pour vous réserver un accueil de qualité.</p>
+					
+				</div>					
+			</div>
+
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="feature-block-2 feature-bordered feature-shadow feature-bg inner-40 center-holder">
+					<i class="icon-employee"></i>
+					<h4>professionnalisme</h4>
+					<p>Nos spécialistes ont été recrutés sur des critères exigeants, le matériel utilisé répond à des normes strictes. Chaque consultation, acte et/ou intervention vous seront expliqués en toute transparence.</p>
+					
+				</div>					
+			</div>								
+		</div>	
+	</div>
+</div>
+<!--Objectives Section END -->
+
+
+
+
+<!-- Services Section START -->
+<div id="Se" class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<small>Toutes les spécialités de notre cabinet</small>
+			<h3 class="bold">Notre expertise au service de votre sourire</h3>
+			<div class="section-heading-line"></div>
+			<p>C’est par le souci du détail, l’importance accordée à chacun que 
+			<br>se définit notre service.</p>
+		</div>				
+
+		<div class="row mt-40">
+
+			{% for service in service_list %}
+
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="feature-float clearfix">
+					<div class="feature-float-icon">
+						<img src="{{service.image.url}}" alt="img" height="45px" width="45px">
+					</div>
+					<div class="feature-float-content">
+						<h4><a  href="#Se">{{service.name}}</a></h4>
+						<p>{{service.description|truncatewords:11}}</p>
+						<span class="badge badge-light"><a href="{% url 'services:service_detail' service.id %}" >En Savoir Plus...</a></span>
+					</div>
+				</div>	
+						
+			</div>
+			{% endfor %}								
+		</div>
+		
+	</div>	
+</div>
+
+
+<!-- Services Section END -->
+
+<!-- Engagements Section START -->
+<div id="eng" class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"  style="background-image: url('/static/site_static/20.jpg');">
+	<div class="container">	
+		<div class="owl-carousel owl-theme" id="testmonials-parallax"> 
+
+			<div class="testmonial-parallax center-holder">
+				<div class="testmonial-parallax-text">
+					
+					<p class="italic libre-baskerville">Le centre dentaire Ben Ayad Est s’engage à recevoir tous les patients sans aucune distinction de ressources, d’âge, de sexe ou d’origine.</p>
+					<h4><span class="italic libre-baskerville" style="color:rgb(60,136,126)">Nos Engagements :</span></h4>
+					<strong>une prise en charge de qualité</strong>
+				</div>
+			</div>
+
+			<div class="testmonial-parallax center-holder">
+				<div class="testmonial-parallax-text">
+					
+					<p class="italic libre-baskerville">La qualité de notre système de soins repose sur le respect mutuel des personnes, des spécialités exercées et des équipements.</p>
+					<h4><span class="italic libre-baskerville primary-color">Nos Engagements :</span></h4>
+					<strong>une prise en charge de qualité</strong>
+				</div>
+			</div>
+
+			<div class="testmonial-parallax center-holder">
+				<div class="testmonial-parallax-text">
+				
+					<p class="italic libre-baskerville">Le règlement des honoraires se fera à la fin de chaque consultation médicale, conformément à la prise en charge initiale.</p>
+					<h4><span class="italic libre-baskerville " style="color:rgb(60,136,126)">Nos Engagements :</span></h4>
+					<strong>une prise en charge de qualité</strong>
+				</div>
+			</div>	
+
+			<div class="testmonial-parallax center-holder">
+				<div class="testmonial-parallax-text">
+					
+					<p class="italic libre-baskerville">Pour toute annulation de RDV, merci de nous prévenir 48h avant !</p>
+					<h4><span class="italic libre-baskerville primary-color">Nos Engagements :</span></h4>
+					<strong>une prise en charge de qualité</strong>
+				</div>
+			</div>	
+
+		
+
+		</div>	
+	</div>
+</div>	
+<!-- engagements Section END -->
+
+
+
+
+
+
+
+
+
+
+<!-- Parallax Section START 
+<div class="section-block-parallax jarallax black-overlay-20" data-jarallax data-speed="0.6"  style="background-image: url('/static/site_static/50.jpg');">
+	<div class="container">
+		<div class="large-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
+			<h2 class="white-color">Comprehensive Dentistery <br>Votre Santé Dentaire est Notre priorité.</h2>
+			<div class="section-heading-line"></div>
+		</div>
+		<div class="mt-25 center-holder wow fadeIn animated" data-wow-delay=".2s">
+			<a href="#Ren" class="white-button button-md">Prise à rendez-vous</a>
+		</div>
+	</div>
+</div>
+<!---Parallax Section END -->
+
+
+
+
+<!-- Team Members Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h3 class="bold">Rencontrez<span class="italic libre-baskerville " style="color:rgb(60,136,126)"> Notre Équipe</span></h3>
+			<div class="section-heading-line"></div>
+			<p>Notre Cabinet est fier de présenter une équipe de professionnels pour votre service.</p>
+		</div>			
+		<div class="row mt-30">
+			<div class="owl-carousel owl-theme" id="team-block"> 
+
+                {% for equipe in equipe_list %} 
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">{{equipe.name}}</a></h4>
+								<h6 class="italic libre-baskerville" style="color:rgb(60,136,126)">{{equipe.title}}</h6>
+								<p>{{equipe.bio}}</p>
+								<ul>
+									<li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li> <a href="#"><i class="fab fa-google"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-img">
+								<img src="{{equipe.image.url}}" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+		        {% endfor %}
+											
+			</div>
+		</div>	
+	</div>
+</div>
+<!-- Team Members Section END -->
+
+<!-- 3 Columns Carousel Section Section START -->
+<div class="section-block pt-0 pb-0"  class="section-block-parallax jarallax black-overlay-20" data-jarallax data-speed="0.6"   style="background-image: url('/static/site_static/map-image.jpg');">
+	<div class="container">
+		<div class="small-heading center-holder mt-80 mb-40">
+			<span class="uppercase">Avis et commentaires des clients</span>
+		</div>		
+			
+		<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+			<div class="item">
+				<div class="testmonial-modern">
+						<p>"Beau cabinet, propre, accueil excellent et professionnel, 
+							et une équipe très compétente et de bon conseil...".</br>
+						</p>
+						<div class="row mt-25">
+							<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 	<div class="testmonial-modern-img">
+									<img src="/static/site_static/Y.jpg" alt="image">
+							 	</div>
+							 </div>
+
+							 <div class="col-md-9 col-sm-9 col-xs-12">
+							 	<div class="testmonial-modern-name">
+							 		<h4>Soufiane Najih</h4>
+							 		
+							 	</div>
+							 </div>
+						</div>	
+					</div>
+			</div>
+			<div class="item">
+				<div class="testmonial-modern">
+					<p>Excellente dentiste très douce et compétente .cabinet très propre et qui respecte les mesures d'hygièneje la recommande vivement !</p>
+					<div class="row mt-25">
+						<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 <div class="testmonial-modern-img">
+								<img src="/static/site_static/Z.jpg" alt="image">
+							 </div>
+						 </div>
+
+						 <div class="col-md-9 col-sm-9 col-xs-12">
+							 <div class="testmonial-modern-name">
+								 <h4>Hoda Ben</h4>
+								 
+							 </div>
+						 </div>
+					</div>	
+				</div>
+			</div>	
+			<div class="item">
+				<div class="testmonial-modern">
+					<p>Super dentiste ! Bon accueil, compétente , surprise par votre professionnalisme le temps et le respect que vous accordez à vos patients ...</p>
+					<div class="row mt-25">
+						<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 <div class="testmonial-modern-img">
+								<img src="/static/site_static/Z.jpg" alt="image">
+							 </div>
+						 </div>
+
+						 <div class="col-md-9 col-sm-9 col-xs-12">
+							 <div class="testmonial-modern-name">
+								 <h4>Fatima-Zahra Oumellaik</h4>
+								 
+							 </div>
+						 </div>
+					</div>	
+				</div>
+			</div>		
+			<div class="item">
+				<div class="testmonial-modern">
+					<p>"Très bonne dentiste! sympatique et très professionnelle..</br>
+					</br>
+				</p>
+					<div class="row mt-25">
+						<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 <div class="testmonial-modern-img">
+								<img src="/static/site_static/Y.jpg" alt="image">
+							 </div>
+						 </div>
+
+						 <div class="col-md-9 col-sm-9 col-xs-12">
+							 <div class="testmonial-modern-name">
+								 <h4>adam Yahyaoui</h4>
+								 
+							 </div>
+						 </div>
+					</div>	
+				</div>
+			</div>	
+			<div class="item">
+				<div class="testmonial-modern">
+					<p>Je recommande vivement Dr Ben Ayad, compétence, ponctualité et beaucoup de qualités humaines</p>
+					<div class="row mt-25">
+						<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 <div class="testmonial-modern-img">
+								<img src="/static/site_static/Y.jpg" alt="image">
+							 </div>
+						 </div>
+
+						 <div class="col-md-9 col-sm-9 col-xs-12">
+							 <div class="testmonial-modern-name">
+								 <h4>mustapha chaqda</h4>
+								 
+							 </div>
+						 </div>
+					</div>	
+				</div>
+			</div>		
+			<div class="item">
+				<div class="testmonial-modern">
+					<p>Je vous recommande vivement cabinet  Docteur BEN AYAD Ferdaous , médecin trés compétente et équipre trés sympa.</p>
+					<div class="row mt-25">
+						<div class="col-md-3 col-sm-3 col-xs-12 pr-0">
+							 <div class="testmonial-modern-img">
+								<img src="/static/site_static/Z.jpg" alt="image">
+							 </div>
+						 </div>
+
+						 <div class="col-md-9 col-sm-9 col-xs-12">
+							 <div class="testmonial-modern-name">
+								 <h4>oumaima kaissi</h4>
+								 
+							 </div>
+						 </div>
+					</div>	
+				</div>
+			</div>								
+		</div>							
+	</div>
+</div>
+<!-- 3 Columns Carousel Section Section END -->
+
+
+ 
+
+<!-- Tabs with Big icons Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="small-heading center-holder mb-40">
+			<span class="uppercase" style="color:rgb(60,136,126)">Découvrez Nos Plus Récents Articles.</span>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 col-sm-12 col-12 offset-md-1">
+				<!-- Tabs Start -->
+				<div class="medium-icon-tabs-light">
+					<div class='tabs tabs_animate mt-10'>
+					    <ul class="tab-menu center-holder">
+					        <li><a href="#tab-f-1">
+								La santé dentaire général</a></li>
+					        <li><a href="#tab-f-2">Dentisterie Pédiatrique</a></li>
+							
+					        <li><a href="#tab-f-3">Dentisterie esthétique</a></li>
+					        <li><a href="#tab-f-4">
+								Prothése Dentaire</a></li>
+					        <li><a href="#tab-f-5">Soins et Traitements</a></li>
+					    </ul>
+
+					    <!-- Tab 1 Start -->
+					    <div id='tab-f-1' class="clearfix tab-body">
+					    	<div class="row mt-40">
+					    		<div class="col-md-6 col-sm-6 col-12">
+					    			<img src="/static/site_static/a.jpg" alt="img">
+					    		</div>
+					    		<div class="col-md-6 col-sm-6 col-12">
+									<div class="section-heading left-holder">
+										<h2 class="bold">Causes et conséquences de la perte des dents</h2>
+										<div class="section-heading-line"></div>
+									</div>
+									<div class="text-content-big">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in.</p>
+									</div>	
+									 
+									<div class="mt-15">
+										<a href="{% url 'blog:post_list' %}" class="button-sm grey-button">Savoir Plus...</a>
+									</div>  			
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- Tab 1 End -->
+
+					    <!-- Tab 2 Start -->
+					    <div id='tab-f-2' class="clearfix tab-body">
+					    	<div class="row mt-40">
+					    		<div class="col-md-6 col-sm-6 col-12">
+					    			<img src="/static/site_static/13.jpg" alt="img">
+					    		</div>
+					    		<div class="col-md-6 col-sm-6 col-12">		
+									<div class="section-heading left-holder">
+										<h2 class="bold">Les caries chez les enfants : des risques réels</h2>
+										<div class="section-heading-line"></div>
+									</div>
+									<div class="text-content-big">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in.</p>
+									</div>	
+									
+									<div class="mt-15">
+										<a href="{% url 'blog:post_list' %}" class="button-sm grey-button">Savoir Plus...</a>
+									</div>	   			
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- Tab 2 End -->
+
+					    <!-- Tab 3 Start -->
+					    <div id='tab-f-3' class="clearfix tab-body">
+					    	<div class="row mt-40">
+					    		<div class="col-md-6 col-sm-6 col-12">
+					    			<img src="/static/site_static/20.jpg" alt="img">
+					    		</div>
+					    		<div class="col-md-6 col-sm-6 col-12">
+									<div class="section-heading left-holder">
+										<h2 class="bold">Comment avoir un beau sourire</h2>
+										<div class="section-heading-line"></div>
+									</div>
+									<div class="text-content-big">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in.</p>
+									</div>	
+								 
+									<div class="mt-15">
+										<a href="{% url 'blog:post_list' %}" class="button-sm grey-button">Savoir Plus...</a>
+									</div>  			
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- Tab 3 End -->
+
+					    <!-- Tab 4 Start -->
+					    <div id='tab-f-4' class="clearfix tab-body">
+					    	<div class="row mt-40">
+					    		<div class="col-md-6 col-sm-6 col-12">
+					    			<img src="/static/site_static/e.jpg" class="extra-rounded-border shadow-primary" alt="img">
+					    		</div>
+					    		<div class="col-md-6 col-sm-6 col-12">
+									<div class="section-heading left-holder">
+										<h2 class="bold">Bisphosphonates et soins bucco-dentaires</h2>
+										<div class="section-heading-line"></div>
+									</div>
+									<div class="text-content-big">
+										<p>Les bisphosphonates pris de façon intraveineuse (injection dans une veine) peuvent causer,
+											 quoique rarement, une condition dans la bouche appelée ostéonécrose. Elle se caractérise par
+											  la perte d’os autour des dents lorsque les cellules osseuses meurent. Il est alors très important 
+											  d’aviser son dentiste si on prend des bisphosphonates par voie intraveineuse, car dans ce cas, certains
+											  .....</p>
+									</div>	
+									<div class="mt-15">
+										<a href="{% url 'blog:post_list' %}" class="button-sm grey-button">Savoir Plu...</a>
+									</div>   			
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- Tab 4 End -->
+
+					    <!-- Tab 5 Start -->
+					    <div id='tab-f-5' class="clearfix tab-body">
+					    	<div class="row mt-40">
+					    		<div class="col-md-6 col-sm-6 col-12">
+					    			<img src="/static/site_static/90.jpg" class="extra-rounded-border shadow-primary" alt="img">
+					    		</div>
+					    		<div class="col-md-6 col-sm-6 col-12">
+									<div class="section-heading left-holder">
+										<h2 class="bold">10 mythes et réalités sur le traitement de canal</h2>
+										<div class="section-heading-line"></div>
+									</div>
+									<div class="text-content-big">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in.</p>
+									</div>	
+									<div class="mt-15">
+										<a href="{% url 'blog:post_list' %}" class="button-sm grey-button">Learn More</a>
+									</div>   			
+					    		</div>
+					    	</div>
+					    </div>
+					    <!-- Tab 5 End -->			    
+					</div>	
+				</div>				
+				<!-- Tabs End -->					
+			</div>
+		</div>	
+	</div>	
+</div>
+<!-- Tabs with Big icons Section END -->
+
+
+<!--Rendez_vous form-->
+
+
+<div id="Ren" class="section-block-parallax jarallax black-overlay-20" data-jarallax data-speed="0.6"   style="background-image: url('/static/site_static/b.jpg');">
+	
+	
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-10 col-sm-12 col-12 offset-md-1">
+		  <div class="small-heading center-holder mb-40">
+			   <span class="white-color uppercase">Rendez-vous</span>
+		  </div>	
+		   <div class="mt-40">
+             <form method="POST" action="" class="transparent-form" >
+	          {% csrf_token %}
+	          {% bootstrap_form form %}
+			  
+	         <div class="col-12">
+		         {% buttons %}
+					<button type="submit" class="white-button button-sm semi-rounded">Confirmer</button>
+		         {% endbuttons %}
+			  </div>								
+				     
+   
+			 </form>
+   
+	
+		   </div>	
+	   </div>
+      </div>		
+   </div>
+</div>
+   
+<!-- Footer START -->
+<footer class="footer-style-1-light">
+	<div class="container">
+		<div class="row">
+			<!-- Column 1 Start -->
+			<div class="col-md-4 col-sm-6 col-12">
+				<h3>A propos nous</h3>
+				<a href="#"><img src="/static/site_static/img/logos/logo.png" alt="logo" id="main_logo"></a>
+
+				<div class="mt-20">
+					<p>Le Centre Dentaire BEN AYAD est une structure qui réunit,
+						dans la même enceinte, différentes spécialités en soins dentaires
+						 en général, permettant de</br>
+						 <a href="#inf" class="small-text ">En Savoir Plus</a></p>
+				</div>
+			</br>
+				<ul class="footer-style-1-social-links">
+					<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+					<li>  <a target="_blank" href=""><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</div>
+			<!-- Column 1 End -->
+
+			<!-- Column 2 Start -->
+			<div class="col-md-3 col-sm-6 col-12">
+				<h3>Articles Récents</h3>
+				<ul class="footer-style-1-latest-news">
+					<li><span>30.03.2018</span><a href="{% url 'blog:post_list' %}">Bisphosphonates et soins bucco-dentaires</a></li>
+					<li><span>29.03.2018</span><a href="{% url 'blog:post_list' %}">10 mythes et réalités sur le traitement de canal</a></li>
+					<li><span>28.03.2018</span><a href="{% url 'blog:post_list' %}">Causes et conséquences de la perte des dents!</a></li>
+				</ul>
+			</div>
+			<!-- Column 2 End -->
+
+			<!-- Column 3 Start -->
+			<div class="col-md-3 col-sm-6 col-12">
+				<h3>Joindre notre cabinet</h3>
+				<ul class="footer-style-1-contact-info">
+					<li><i class="fa fa-phone"></i> <span>+212 639-871415</span></li>
+					<li><i class="fa fa-envelope-open"></i> <span>cabinet.drbenayad@gmail.com</span></li>
+					<li><i class="fa fa-map-marker-alt"></i> <span>419, BD ABDELLAH EL GUERSIFI AGADIR 80000</span></li>
+					<li><i class="fa fa-phone-square"></i> <span>+212 5283-21492</span></li>
+				</ul>
+			</div>
+			<!-- Column 3 End -->
+
+			<!-- Column 4 Start -->
+			<div class="col-md-2 col-sm-6 col-12">
+				<h3>Plan de Site</h3>
+				<ul class="footer-style-1-links">
+					<li><a href="#Se">Nos Services</a></li>
+					<li><a href="#ob">Nos objectifs</a></li>
+					<li><a href="#eng">Nos engagements</a></li>
+					<li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+					<li><a href="{% url 'equipes:equipe_list'  %}">Notre Equipe</a></li>
+					<li><a href="{% url 'contact:send_email' %}">Contactez-nous</a></li>
+					<li><a href="#Ren">Obtenir un Rendez-vous</a></li>
+				</ul>
+			</div>		
+			<!-- Column 4 End -->										
+		</div>
+	</div>
+
+	<div class="footer-style-1-bar">
+		<div class="container">
+			<div class="row">
+				
+
+				<div class="col-md-6 col-sm-6 col-12">
+					<ul class="footer-style-1-bar-links">
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer END -->
+
+   
+{% endblock body %}
